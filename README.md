@@ -6,6 +6,9 @@
 - Rails version
   - 5
 
+- Git Clone
+  - bundle install
+
 - Database creation
  - rake db:create
  - rake db:migrate
