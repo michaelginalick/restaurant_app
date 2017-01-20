@@ -1,0 +1,1620 @@
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.7ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'restaurant_app_test'[0m
+  [1m[35m (4.2ms)[0m  [1m[35mTRUNCATE TABLE `api_keys`;[0m
+  [1m[35m (3.4ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (3.7ms)[0m  [1m[35mTRUNCATE TABLE `menu_items`;[0m
+  [1m[35m (3.6ms)[0m  [1m[35mTRUNCATE TABLE `restaurants`;[0m
+  [1m[35m (5.0ms)[0m  [1m[35mTRUNCATE TABLE `tags`;[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `api_keys` (`access_token`, `created_at`, `updated_at`) VALUES ('dATrvyRRfsUWX7SR2nqORPYpxixStLyo', '2017-01-20 07:46:30', '2017-01-20 07:46:30')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Bruen-Bechtelar', 'xi6sunvc172xu8fnzl42hxj71tdu411hyqeo1qijskv9j1q2pq4vmhd4zdox5zn44p0wirw8g9aoxwob7bndzh2mrkfjt9dgvngh', 'West Fleta Maryland 35842 Daija Stream', 2.1, '2017-01-20 07:46:30', '2017-01-20 07:46:30')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Figs', 'utt2o1kf9tzhrx81uwcqm8eispto0s9yf7pt4hgsi1a4fwct3wnwar95pff7a7286azwmi3fazhn3om6xhjq3bbaiwp7lkvxn2sr', 'entree', 1, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[36mMenuItem Load (0.4ms)[0m  [1m[34mSELECT  `menu_items`.* FROM `menu_items` WHERE `menu_items`.`restaurant_id` = 1 LIMIT 10 OFFSET 0[0m
+  [1m[35m (6.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Keeling, Keeling and Bogisich', 'zhh4i9dqgk7lbpnauq19akrwlcqmx2z0cbfn875bwypc1ivz48szirgrhuuwpqt8ggnmu9ejgn30gufwxcwzbt5xh4n7vke7nhp3', 'Bradberg Rhode Island 58514 Lauren Harbors', 3.1, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Green Chicken Curry', 'ouua7gv8p2vj9ms33i8p4flvg88n3xevnffsdwr2598s6rzs84gkiwtthzv48sfutumgj38ctno050pwiyasgzyzxyk0ghw73ete', 'appetizer', 2, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Avocado Spread', 'dx5qjg3hwzg07kk0qqpro3p5rkvbevsyziosvsmr3m52rbwt115v80ihyh6lke57soaw0wjh3wi7y3q52v2abqs0w1tvu16ga368', 'appetizer', 2, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Walnut', '9m1zlmcaq1e15jahza8og1838scghrw562uyuzwr83zh5z6uugi0je3aoiph1agi4es1b7g1qaaebpio527e9gluqmzpncz0oe5a', 'beverage', 2, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Tomatoes', 'tp1lp8meja4vdy6darygvqg8zuc0ibv5j4pmgunkyvtcxm5xd6vi9gavn0wnnxegn6dztw77bg2vcxl3pze7w40cllpec08zwfx3', 'dessert', 2, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Bok Choy', 'uub5purex50nolifnufx41qvvb0ljw44pgweseicfkrcv46y5aetgdxojqfn2q1gca2deowyty63ljbbgvjef8x9h7ex7l5zv5up', 'entree', 2, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Celery', '5iiqmwzpeztjmbkdjomv2h9264s1yxtzzt34wablo9svt5081tw2sux0ngtf50wio27kb5ngm0pbb24wa14ifjaovbwqw91nwtg2', 'entree', 2, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Cucumber', '9pnw7m4d9ib06ozml883bnlqe2uh0074u9slxro2r5uqs2f1qwx3k9ozay8nlud3oulkoxh1inb4ogdtc7dtli8tfq4h8s4jg9r2', 'side', 2, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Papaya', 'cj0rghlz6aus79x5fwi73hx9a9gr5h5tlsa86m3n51etng0opfq14wr9t5g292ddt7uxe9tek692labhklmo35nq08jjw111uqua', 'appetizer', 2, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Choy Sum', '6tqxezjd8cumbai75iynzt81i4huvc8dye3i79g1lrikfcipzyeje85qahw07qr06rpvn0kg62po00vwy3anu5ajgf9slg0knkp8', 'side', 2, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Chives', '93jha1z5mdv1mocymrefqrqnasat307anw4cjg2skosylas9cvnvftrb0wkjki3yuhg34lqs4gt7qetpqiz9tizxlm9kh8rvp583', 'side', 2, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Broccoli', 't4a6w2z15d8vu458b4vfvmg3h9evhlzcqj71id6d7epbzzwai9l6ytu9rhp7oigw7r72fhjxbxudsux06lp2kf5wf0lt0d5aju5a', 'entree', 2, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `menu_items` WHERE `menu_items`.`restaurant_id` = 2 LIMIT 10 OFFSET 10) subquery_for_count[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Gleason, Kuvalis and Thompson', 'zrw02eec0f0guerqq0zeb01z4qm95060x9p3202oorybynsy7e2i1ksq5mvws1v24f1x5pmtmvc6t0lrsn5csx9x7kwdczc6oiyp', 'Port Jefferey Oregon 29248 Bethany Parkway', 0.0, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Swiss Chard', 'vi3z98ex341g7wdged35jjt8t56ylvujeojhiqyuzm3kjtz0z466ti8mhwkc1un4d93xm7stc115wtqdh66mmb3yh7cjcfrti1c7', 'side', 3, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Almonds', '9ob4dtz5khogj8b0q3zh4miu2en7b72tg39ysekfvzpxbseq9nwhmwoeyurzij47xbw2sivm4qodaawj1k4uxy8oe75oekkxivat', 'dessert', 3, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Beef Stock', 'a9w969bajbspgprlkr9b55fmx13pilakmbnfjvyyd29p1kboc0g6h7j0tpq7fk2p2je7vapb3r3kbwd810yjthzydojswadfjvwt', 'dessert', 3, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Anchovies', '7l4txemtw0pwdrqurqyhg8mvpoluihiv0l678xbi3umun0tjztcjs9ee3myuwo3q0y7wu686m2en71tan90e7405cusc15cm8vnl', 'entree', 3, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Olive Oil', 'yjsr4qkhcfibva4dwvkau31jrfpslz4ul8o83hf95kix5b7f34g0cm3bncvtc81ympm8ccc6dpr4copfap61r4ymiu5ny5qbkujh', 'entree', 3, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Raisin', '7uypsswlvbmqsob3hcwfk7p814m990q8nkhhexuhm9e4b8pyt27s343gvryst93y0cx51jemmukiff0bfjioxo1330wxe8qbofie', 'beverage', 3, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Persimmon', 'ev1h9z9a9bz0rwzbq4ijimww9y5372hr2kszgzcblhuezuv3he8sokpuds0lvna5me40f54mjhixkql12bwccu563f04hs8ucer8', 'entree', 3, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.5ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Jarrahdale pumpkin', 'zt4y01c9jf5erw3dd394zizoe7vmb0qqqs7giajwtqtdvzkmtyye9ic5q43cbmck2r0d7q2mfv9aspn8dhweg60x9r80dc3uv5dw', 'beverage', 3, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Flathead', '8h8s1dd1lx13thas9drc0frzl6qtjpc7a1pdz8j3m4wx02zt0wpe75cr0a28r5ylbzisdcpwfbj3qusuic59e33v6f11iwsw6796', 'appetizer', 3, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Mulberries', 've86o1b74tuluztrm5mf8yehould7be45kaiez1fq2gq4cerchee4ynqpwvikcw3n6jdcg35gl1vds8bvy9wzcpdf9ld5oouahgh', 'appetizer', 3, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Wholewheat flour', 'nxbxan1fubang8eh7sxnhqc1go6yf00qjhpotn4p9cvisofbvrzrhkeqwgon6a9g7bkwydio93uazi0bbrvqxv5zcqyvwmef1txr', 'entree', 3, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT `menu_items`.`id`) FROM `menu_items` WHERE `menu_items`.`restaurant_id` = 3[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `menu_items` WHERE `menu_items`.`restaurant_id` = 3 LIMIT 11 OFFSET 0) subquery_for_count[0m
+  [1m[35m (2.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Ryan, Cummerata and Rodriguez', '8bqcf7vkv50tv6sk1ngc86wt0msbdma86yundvim9g64jt3yilipt22ikdf8lw0gs9qncs5cz0jsvmt7k587fzkjjzptdi714aa6', 'Oberbrunnerfurt Nevada 61409 Frami Bridge', 4.2, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Bartoletti and Sons', '42lotc6l7yv707dek7jwtwy8be1smerhzaehgmyglczcrafphdhc2jvop8iro0bl5c1hgez520jomus3t5ynhx2fs6w1yhr1ova5', 'New Petra Wyoming 6699 Nitzsche Plains', 1.8, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Olson-Bosco', '6sufcw2o3y6ovk3d3oujrgx62ehoarq4sp5i4kb0dc363jjq3wnp8dnma3dxfor2z735mt1kv447im24m2g3kmjcb50vhfmjxv2f', 'Vicentatown Ohio 1190 Brekke Knoll', 4.6, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Anderson, Crooks and Towne', 'y2nbcqquz7wf9nyzgw66dxrt4ucwmuv78p58f3uk7pksqj0v6t2uyi0rv2swifrqawg0tz180ya5phde9ixloy6l6tx59uek2scb', 'North Rosie Oklahoma 840 Runte Ways', 0.3, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Deckow-Torp', 'etx0pyyo0s6nu41gnxtex3w3olcjtonolj83nzbr7r3d5o6egt6mvfqlfewa6amd2hl2ihvutkx0hjeyedmrgg0mtbrqnrgxjnca', 'Zulaufville Rhode Island 95659 Schiller Mission', 4.5, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Parisian, Hills and Goldner', 'jp8l1l4dl80umt31djjyc57tgm0rg1m0ucxhozrfgwu3vza9orf1q36dl067q8d55m9gzkvbzrvu2v59e5hzav2ha819qfsi8k8c', 'New Brook Idaho 6720 Kuvalis Corner', 3.0, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Emmerich-Barton', '0gauhry9b54l1yafy2f1rzsueng497yos60v6glx300cibdxraqvou7w5rwhp83w3kf89pflgmv1tos2xvt97dznc9v4w4v7up5r', 'Lake Charles Washington 22634 Peter Brook', 3.7, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Braun, Botsford and Morissette', '67viaqmbf8caf7na8xatpjrlxn7clbu5bhmk9yntrzebzb6you6ilwz36usru1bp3pejn0v1saf5r7i8scewujt5szm6si67ckvi', 'Lueilwitzbury Alaska 989 Everette Brook', 0.8, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Hamill Inc', 'uvotgdeln0oe8vd7t7rntn92b6ka5qn948gtyjv4u6ramx40vk4rxed0lkbtcby0tvhm7wnfnshqke3ec5syemu7zenl1oqrmr2z', 'Califort Maine 55855 Weissnat Lane', 1.0, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Wunsch, Muller and Schiller', 'l9hem30rh27yec8jlt50rwfmksgy47y0eolax4csw9z9skgusl6wk4d3d2u7wa3h7do79d5cu3av670r41r8fpnka530dxtfv6e2', 'Elinoreville Rhode Island 25621 Ruthe Pines', 1.3, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Torp LLC', 'ljqioqj5xm8dgd5q9iurm13om3tzf51v2wjmptwxsw5n0inxu1fg2orj7oxdrq4mehrzrguvftewan855hxxbmwavlzojmnf1yzm', 'Kovacekhaven Wyoming 5753 Arvid Vista', 5.0, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Leannon-Will', 'pxazhrxjpkfxwxv5i9ri8pj4j78q7kfjdx8norzj5ng3wc53h29qg5cd76pfxfjcskpwj80gudd2x1b609kyhee4ly5r4hfijbo8', 'Christmouth New Jersey 41069 Gisselle Drive', 1.5, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `restaurants` LIMIT 10 OFFSET 10) subquery_for_count[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Glover, Armstrong and Jaskolski', '2284f5momuw1wogm3j7unq6hmy37zbvqw1c6ottgumptaojdm53mvr1pysv2n76y09dfwe49s0cfqyuv83qobdtxcslu7qrgjynv', 'Ondrickafurt Virginia 142 Quigley Plains', 2.8, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Hane, Thiel and Yundt', '7zyxofpk02kjzppri4m3wbzgoxkuz8zp7mi6mv43cn35qj8srrg1smxmiwuu2cbx3rzxolz5wk3s1wzkt5w0sg3mirfq03j6irgc', 'South Lela New Mexico 825 Odie Burgs', 0.9, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Reinger Group', 'npkoz0nalemfchefv7opbqruzwjkkfunohx4mbsbd8cupkxwkdwx627i3pok3a22uqo9s34xkac60yoz7a4yqaed6uc4chauhs8a', 'Miguelview California 42835 Tate Mountains', 2.0, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('O\'Hara, Haley and Macejkovic', 'rtiawlg8w59e4slo75zp3ptxi7ojerrx73v1dk2gt86rkov25fjoea12n5tnfhogokfwahwzha1y9pftmhfnic96egn1swyhjif2', 'South Marisol Wyoming 14468 Mossie Lodge', 3.6, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Zboncak LLC', 'ze52u1h65ka5b768i7tnq16n7svruhb26i4gsibcjhu1r6tjktw88q4k2ancz3qbppg6mt8nh0x117ro5xsx0sj3sy1q4yki8v5h', 'Brandoville Georgia 58549 Sonia Meadows', 4.6, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Quitzon Group', 'pmxibrdhwzt678mgkltc8vwpgklts7fp0jb4z17nuk22bh4v9jlkhgzk3yqasckb01at3loypfggw3b3a43fpazf8m58yxbuj41h', 'New Elyssaland New Jersey 462 Strosin Island', 0.7, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Lesch-Stanton', '4p4ux8kgwu1t58ruuu9mbh1pse0g3n0c1eqhe7c70p43w62iv9cm1k9k0vuco8aiemc7tqgf17ht177anjx4jnepvrzd7zxv9bxt', 'North Durward North Dakota 196 Briana Island', 1.9, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Olson-Hirthe', 'fjizn3h2u3uxy6h47mm6kauhse4n8fi1hyjyvliwz46aog0rzuvt8klfkejl2j9bi2qwsu0pby9b2l6cis72ujt6zxqr4cfgb5lw', 'Cristfort Georgia 88135 Wunsch Mews', 3.5, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Turner, Keeling and Reichel', 'bzka1mp2zzuejyl82gpqqjejznvzvneuv9i5juggm70vntgl3450r7lz9j2sphgun62ohmr7f6zcw336ic0hlqg1q620hdvq7npr', 'Nannieville Mississippi 945 Cruickshank Fort', 0.2, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Rogahn, Kshlerin and Lebsack', '6e9k81hli2an3swagah98kfxp39lmf19dt7ujawwm229i72e15s8pjdifz5q7jv075as4ugh21pvv95aep7rtpmrsr6b5my2up8b', 'Lake Bernieside Montana 1309 Amely Landing', 1.3, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Greenfelder, Dibbert and Cremin', 'zn4sit1civgjk7odffcq3ruatfqsu8qz8550r76b6logq71ts7ukzrjtsth0k7zzq21fm74lgvixwyb5ezt8mxzg60vq4ac2ybs2', 'Ellieport Washington 48164 Marquis Glens', 3.8, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT `restaurants`.`id`) FROM `restaurants`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `restaurants` LIMIT 11 OFFSET 0) subquery_for_count[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+Started GET "/api/v1/restaurants" for 127.0.0.1 at 2017-01-20 01:46:31 -0600
+Processing by Api::V1::RestaurantsController#index as HTML
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 403 Forbidden in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Hickle, Cronin and Cole', '8s9a0eokz4i9gpwybqze36755x94fmvdtbgokzg9ufoqz90k5vtexr9z7kcoo5lxgkiw27mvffxp4lvzvxym11m5c51ngcedjfwl', 'Ziemannshire North Carolina 60222 Lind Vista', 3.2, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Langworth-Sawayn', 'hihdi2wz666whmdj0fx2wwh1l5jawtj05xzwlspfvnlv4vpnkalszt8ol3mhz2867ds164k38itnxjn7aw4jbabxbhl3hjvgx7ji', 'Brittanymouth Idaho 6051 Rolfson Circle', 3.3, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Medhurst-Little', 's8f0tgs0jr92ty5pionx8trk0oprw1k0sfdslxqeew8xcowdngf1db0n9157erphuy7t67nx4atdl648s9w22rc1htfeqeg9ex16', 'Boyerview Alaska 67196 Monahan Row', 3.7, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `api_keys` (`access_token`, `created_at`, `updated_at`) VALUES ('-MbpPaXf1EgzEHGWLFqkoikhaw5e2qM3', '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+Started GET "/api/v1/restaurants?page[number]=0&page[size]=3" for 127.0.0.1 at 2017-01-20 01:46:31 -0600
+Processing by Api::V1::RestaurantsController#index as HTML
+  Parameters: {"page"=>{"number"=>"0", "size"=>"3"}}
+  [1m[36mApiKey Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM `api_keys` WHERE `api_keys`.`access_token` = '-MbpPaXf1EgzEHGWLFqkoikhaw5e2qM3' LIMIT 1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` LIMIT 3 OFFSET 0[0m
+Completed 200 OK in 11ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Goyette-Ruecker', 'x6571vdwhtap4hb1160r89xk58oc3qlzsg1e223enmjplkod26jk30tfyg83ba6q79navt6jmj4mdi6bpr52c6hsrjwi5dw0dt4q', 'Port Chanceton Missouri 19005 Isaiah River', 0.8, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Hilpert-Bauch', 'ttn122ystbsomq48sk4375xslxqsf9kbig9l099xamlk3khfe78md7o5kucsf00gb4x3oqfgeo1j0dc3zp5sdp2dwd5c01oij13v', 'Creminfurt Indiana 31649 Thiel Tunnel', 0.3, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Ferry, Gulgowski and Ryan', 'nd82kcw4hon1c39i77nv3g94f2qu7brif1aln2hlv4oj58la4loe8a4kzitjn3z5yqjf8yr5c1i1jzncdpc7yvqb45ifivu9htiq', 'South Mathewshire New Hampshire 953 Savion Creek', 3.3, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Huels Inc', '3a2u17co4if9n6z2kpc1akhd8qurlvh1ynyf0qg3sakgao7vh29wz47blo3il1tfvxgjwatsbj50v5bcwwn68s5vkyhu3c3hv0nq', 'Hammesfort New Mexico 695 O\'Hara Parkway', 2.1, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Tromp, Mante and Kunde', 'tdw7ew5x936uhev0esn5555qts13jmmxm490xokq3z5hhonppb5a8acx8p9fpg5ijrkwriwfgblgjxs09vhcuhghptm2tcjkho2w', 'Lake Elenastad Illinois 8592 Bailey Avenue', 4.6, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Schumm, Dietrich and Trantow', 'wzehkghpttz4hwn2r88n6xc8rgg8as8mnda3tdmup570sv33nrdlox9gxv4e3eufnxucn57oo5pyo0qenv6n2umpd1xwhszjw9rp', 'Schadenstad Maine 631 Aron Crossroad', 4.2, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Casper, Hermann and Conroy', 'au3ifmniiu9oyvmogeopvaffiek7hpx7p7tkhgvdokgspeejztedjxpuarf98r0z87rmi87wedis1aa2lew6m7wicrurwsdd34li', 'Michaelville Kansas 905 Junior Cove', 4.0, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Harvey Inc', 'efch3ki1332b0m0jmwwayouvi6z85ic70lkqshacuxwk8zzect6r5ts0a5qpg7e6cocfw5gx3rotoff3ymevmxommdjo7iztpapv', 'Ziemanntown Delaware 3908 Blick Manors', 0.4, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Greenfelder, Paucek and Tromp', 'patdlisthd8991xsyiqaeosjpjwkunbl741f6x0o3jvw81iclo6u47q44g8frol6n9b932exsrub8ur688zhizt3n8vexz79oxi4', 'North Cordeliafort Texas 91148 Heller Forest', 2.4, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Powlowski Inc', '4yvd7bykzwlj91m391e017mwr4qqwe4ycvur259pgkjwi1jz0i4ydexhrwu0s1ceezuu0vzjkh8nt49uqmrypuiqcaxqms9ns47i', 'Port Norwoodshire Kentucky 4824 Dolores Light', 3.1, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `api_keys` (`access_token`, `created_at`, `updated_at`) VALUES ('_vpLIDaPrXtBQTkRWIgI8T8lsyRUXLeo', '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+Started GET "/api/v1/restaurants?page[number]=0&page[size]=1" for 127.0.0.1 at 2017-01-20 01:46:31 -0600
+Processing by Api::V1::RestaurantsController#index as HTML
+  Parameters: {"page"=>{"number"=>"0", "size"=>"1"}}
+  [1m[36mApiKey Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `api_keys` WHERE `api_keys`.`access_token` = '_vpLIDaPrXtBQTkRWIgI8T8lsyRUXLeo' LIMIT 1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` LIMIT 1 OFFSET 0[0m
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Maggio, Littel and Moore', 'evxj3mjxzpx3zqr6792bvgnakzk5u0l75bbjigwhzuqzi63v9n9ky7g8uunf7r5lg3bwsjrf1aertmiaj84o39bj2ke75ilxhzxh', 'Revaberg Idaho 81626 Bergstrom Port', 1.0, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Radish', 'dvuk34curtvpynea7juo60ekas4eh9bl9trr32w2rkqeoty4cgoeomlt547enryrp6nufrqc5fvw92dtiytz04xizgzrcjdyd32y', 'beverage', 40, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Double-R Diner', 24, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Bay Leaves', 'zvj0tk1mxo555takigsupgtsvtrk5ce2x3f4c1ycqzkbplc0wrha93jexfoajyc43b1fk1i4v601a4wujqnkei0cjga0qcdg8gxv', 'beverage', 40, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Blue Pine Lodge', 25, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Candle Nut', 'gt00s31ucndkso5h0l588erj1lxw91elk5o8m6i8un3k88c6rx3i875e9826t9rci8e0fojayg8iq3aga35cemsmeivfetbb6qkn', 'dessert', 40, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Packard Sawmill', 26, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Camembert', 'mpmzw8f1j2pwlmszumh0v2vyezpb7nmddbf9k4i4fi3veq5e22gtjhh3wvaja3ecbklttivpuszsr1jsu4u05cprvccd1lrpj2tw', 'entree', 40, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Bookhouse', 27, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Dates', '57ar4bhiyhhi7guo23m1jxmph6tb83koggrde2h8qm7g9cwpqh2ba02bokurhd9sz0doyfr830g87dhjuu33vieycgm95o83wy8v', 'beverage', 40, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('One Eyed Jack\'s', 28, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `api_keys` (`access_token`, `created_at`, `updated_at`) VALUES ('awyur1RWwypftEq5bm_-nPi2aSbC5VXA', '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+Started GET "/api/v1/restaurants/show?restaurant_id=40&page[number]=0&page[size]=10" for 127.0.0.1 at 2017-01-20 01:46:31 -0600
+Processing by Api::V1::RestaurantsController#show as HTML
+  Parameters: {"restaurant_id"=>"40", "page"=>{"number"=>"0", "size"=>"10"}, "id"=>"show"}
+  [1m[36mApiKey Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `api_keys` WHERE `api_keys`.`access_token` = 'awyur1RWwypftEq5bm_-nPi2aSbC5VXA' LIMIT 1[0m
+Unpermitted parameters: page, id
+Unpermitted parameters: page, id
+  [1m[36mMenuItem Load (0.2ms)[0m  [1m[34mSELECT  `menu_items`.* FROM `menu_items` WHERE `menu_items`.`restaurant_id` = 40 LIMIT 10 OFFSET 0[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE `tags`.`menu_item_id` = 24[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE `tags`.`menu_item_id` = 25[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE `tags`.`menu_item_id` = 26[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE `tags`.`menu_item_id` = 27[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE `tags`.`menu_item_id` = 28[0m
+Completed 200 OK in 11ms (Views: 0.2ms | ActiveRecord: 1.3ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Bechtelar and Sons', 'ddc5wqtttzjntwksh312sksx04d9769iuvhb5vi39rb9n91z4oym3gfj9xzgrai75shp6x3yl79py94519x2ex6wr1lhvhmxzumb', 'South Jude Delaware 111 Corwin Ridge', 0.7, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Chestnut', 'zwnmafvrnr5ct4d2go7kvm32yv8ke98xrrzf6tnaxej88v46aaklpjgq4gvq2bftjukhot7trsosdn5jop81wf9uq167j8nl4822', 'entree', 41, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Great Northern Hotel', 29, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('FlourRice', '5kqqndtejzaof5tca6k0v94h7hul1afj1yvjgvo7ttd0960z37ded6lo3qfueasv27srsfxbr35sqsfwa8neafb7d14c9uesa85q', 'appetizer', 41, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Great Northern Hotel', 30, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Lychees', 'rbo9zudfve1qdvle1lk5fqkw6450g9htmdntr29mnbtyoda1kq26lmciynjagz9jngcvrgdtbkc9olfz7tn8917nchwd5lkvypjv', 'dessert', 41, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('One Eyed Jack\'s', 31, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Spearmint', 'mv7ckj855ea2dj9b6y4somq2i2b507o3xydz6b6wpjivuzps27bi0iblvzbphqdhi5o0j7zimwbzfa3l7gd8yhwiofv9kxf3m74t', 'dessert', 41, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('White Lodge', 32, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Buckwheat Noodles', 'auqx5a05xorfsxift9jdvo6jj20llwrvwv95to0vjhs6bglxa2z5urvws46n25gmypij20ifqhnq6ymlpzr9jirljkjym601xp2s', 'entree', 41, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('FBI Office', 33, '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+Started GET "/api/v1/restaurants/show" for 127.0.0.1 at 2017-01-20 01:46:31 -0600
+Processing by Api::V1::RestaurantsController#show as HTML
+  Parameters: {"id"=>"show"}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 403 Forbidden in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `api_keys` (`access_token`, `created_at`, `updated_at`) VALUES ('Vm6tkAXPWXb_vlPDcGEoYr8q2JFUICYy', '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+Started GET "/api/v1/restaurants/show?page[number]=0&page[size]=10" for 127.0.0.1 at 2017-01-20 01:46:31 -0600
+Processing by Api::V1::RestaurantsController#show as HTML
+  Parameters: {"page"=>{"number"=>"0", "size"=>"10"}, "id"=>"show"}
+  [1m[36mApiKey Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `api_keys` WHERE `api_keys`.`access_token` = 'Vm6tkAXPWXb_vlPDcGEoYr8q2JFUICYy' LIMIT 1[0m
+Unpermitted parameters: page, id
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `api_keys` (`access_token`, `created_at`, `updated_at`) VALUES ('8jG6LBbb1GQ1iXrERbRBAzaw5a2ttCPU', '2017-01-20 07:46:31', '2017-01-20 07:46:31')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+Started GET "/api/v1/restaurants/show?restaurant_id=5000&page[number]=0&page[size]=10" for 127.0.0.1 at 2017-01-20 01:46:31 -0600
+Processing by Api::V1::RestaurantsController#show as HTML
+  Parameters: {"restaurant_id"=>"5000", "page"=>{"number"=>"0", "size"=>"10"}, "id"=>"show"}
+  [1m[36mApiKey Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `api_keys` WHERE `api_keys`.`access_token` = '8jG6LBbb1GQ1iXrERbRBAzaw5a2ttCPU' LIMIT 1[0m
+Unpermitted parameters: page, id
+Unpermitted parameters: page, id
+  [1m[36mMenuItem Load (0.2ms)[0m  [1m[34mSELECT  `menu_items`.* FROM `menu_items` WHERE `menu_items`.`restaurant_id` = 5000 LIMIT 10 OFFSET 0[0m
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.4ms)
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (0.4ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'restaurant_app_test'[0m
+  [1m[35m (4.4ms)[0m  [1m[35mTRUNCATE TABLE `api_keys`;[0m
+  [1m[35m (3.5ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (3.8ms)[0m  [1m[35mTRUNCATE TABLE `menu_items`;[0m
+  [1m[35m (3.4ms)[0m  [1m[35mTRUNCATE TABLE `restaurants`;[0m
+  [1m[35m (5.4ms)[0m  [1m[35mTRUNCATE TABLE `tags`;[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `api_keys` (`access_token`, `created_at`, `updated_at`) VALUES ('B-0mdvSfy8eOhbQdFML5dND9UUnOYglH', '2017-01-20 07:48:25', '2017-01-20 07:48:25')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Klein-Lynch', 'z1au5vxocsilld23xcq9c34rve5qzvl4agz0s9hj70imdhjzspgjuw6ltq52vopr66cskspouw2x5rjiwv7ma9qkp4eqk51n5mco', 'New Susanna California 18758 Carli Parks', 1.4, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Parsnip', '9xpvjmwbqiu0jx09525gjfwmwvbdewf4cuzo8o75m1oy2z10l4y79qv9jkfirndn6k5szgw3htxvr6jiw2egblf56oahywfig80x', 'side', 1, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[36mMenuItem Load (0.3ms)[0m  [1m[34mSELECT  `menu_items`.* FROM `menu_items` WHERE `menu_items`.`restaurant_id` = 1 LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.9ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Howe, West and Krajcik', '4pbhia5vebayrs6hn0iprgclrmkaw5ik1t0zudvbh29veu2vkb1ctq89j5rpzjmw9yw6zqmmedi4gb65jwdh2adystns7ux2rxwn', 'Paucekbury Oklahoma 726 Faustino Trail', 3.1, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Brown Rice', 'v7d2rcbxnd4ff2jhw1n1nlanvy4s58cewh4nbuk9j5cl3oper61zvr0510729nouzq293evbn0u2fa2xib87hs11bqb6ai7uf58x', 'side', 2, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Chickpea', 'zcay6s46nmed4edlsmlxjn78cpla5hwmplkmyk4554iyihyz3u5xropiquqb9ec25rzp7ug57r422yg6qwpb3daen631cqzehhin', 'side', 2, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Nuts', 'wsuku0zjb7wtk0x2j5dx08i2rsg38zjfvdziacbdmv8yi76lbo3pkdwddree9yasb92q4lcyt6yvv4d5n6u4zlkn8z69ws73ck01', 'beverage', 2, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Banana', 'xpxyf46xme0vtuq561ok3lk60gekccpbw2ozi96n33cx52v26qhzmyx5450uc9n14oev9j06vyn21pprxou3gw2kvj7l30llabh0', 'side', 2, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Apple Juice Concentrate', 'x9335r6tnc3qoy0vcdx6eosxp74y10rhc8lazqmi9btgfeq52v7bc5kn21tzmjgxvpuu4b5qjfbi782atu7kqslhwqmtozrdk06q', 'beverage', 2, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Camellia Tea Oil', 'yu7ng79uo8z8ipz3y0i36kpuouklp7ouqv9pw59bgzds5ksyn89w5f4gpmsb98g2hse7asxd9rm0adce6nw72ykr1oxmi4284gtw', 'entree', 2, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Vanilla Beans', 'b55fdv7pl9tr91n885jya0huddv7iam2hvexo0gjtat8g8yacdw7ed1kul7i5yqw7oog2l7y583l4hku19d469579ucu4v0mcfph', 'entree', 2, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Parsnip', 'u51xdmz6nhc6hbnqiaix3qx70p9lq8w5ul647lrx4mcsktxto3ey1oetoysxyca635rab6ygi2l9u8aq9z40x2xks5py5j7rus9v', 'side', 2, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Tarragon', 'vg4z3e47z1unfk6yy1kkyj7n1fs99m89fam7zkqawc92ojjfanuf2el1xz82ta4gv4m7btoj6p8hwz4hhx8xdu6ejk8a2hq8g5hs', 'entree', 2, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Nutmeg', 'kbfinx06vutdmkv0c06t1qosw8hei5bv6ui3o0q2f2sxs7ib305jztag9yib2ekq7gjiq38znljlq3rld72q3l49dxu015qb82e7', 'appetizer', 2, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Peppermint', '0092xb04oi6hznswpo9m4qxtpzbv51pufnowajf278zwual5sdqi2mpec9wqmal1y09u4764c0xwrlen9f2pvkplyjbhf38wm0pu', 'entree', 2, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `menu_items` WHERE `menu_items`.`restaurant_id` = 2 LIMIT 10 OFFSET 10) subquery_for_count[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Johnson and Sons', 'akcq9dmtj03mdt59dbb2vc7kvcn5bn3mu8oab13xa8389y8pviyv40x8z0lel4jm4feyqedv9hf5aw1wq33jvx25ucpywcopnom1', 'Deannafurt Rhode Island 6896 Isom Inlet', 4.7, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Celery', 'y18278gx7jpofh3rrjp09ndhyabfesvif1jcrw8trp544at13btyzqau6bs00s4w93v3a5q0ogmfnxvl6x8myso7h378wehddf3w', 'entree', 3, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Hokkien Noodles', 'ngqtjkjerl7o1mdu26z6qhokfmwtvqeiwrgzjxdhfcu6t3yy1su3obe67ar7pvm0r610hgi2ke23b004sjuc94y2kai9pahssdcj', 'dessert', 3, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Lettuce', 'n22fjgnzvthrlxg78flk24ks76y6htsy01v4imcohz93gdekf6dtgqg5wf8mhee8ub9ibh30hc0e4cajsc0tm82i1t2gelyp1l4y', 'beverage', 3, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Annatto seed', '1alp3y30jvupqf2c5x2mwimp9m0xzywhmfrk6p5rvfcxabx32hvllj9z5u7jd0iz4n11cmr15791ys8a9174ae6t4jgdtbr1ypuk', 'appetizer', 3, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Blue Swimmer Crab', 'w9jxdc992twgbi4ntceao9mk0olb95y28svff7qnzvxo9c2npjhwls8hk2yarpwxk3mmxroqzvdtlh56pxybk0nhtfe2863qoabq', 'appetizer', 3, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Milk', '9k1xtyke1h2v014b73u6onktlw1p5v37xeikmmm8zarrzgiybrsydrecfnjxoduqy2wjqe51ikqz8vd3lklnmxtiu3ck61vfy5vw', 'entree', 3, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Bonito Flakes', '6odcyceysfofwzmvw36hyvh1n6rc67n7x2avpz8uk0x5z4ojek9vgdmigk421gjwckb9w9stz0y3nlc55otc8dngc71bx9zxhdrw', 'beverage', 3, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('White rice', 'v41j290x9mln6n41bzw3wgb3pi84pd1x9a13otxxo58xtixayot6tsxq22p0dai2oh7uzyqvpmv82vjks96zk6sidedm3n395dhj', 'dessert', 3, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Jerusalem Artichoke', '1cbuwcp8ca2y3y5g0gzj54b3iftp3rogmjgkeqv35wvhwa59frqlxfqclztue4ky4qsbhwpkyg9sh7akkmqsnjd6uisqahzjxn8l', 'beverage', 3, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Miso', 'ycdcgmpm3449w5ic2l4uo552n2v8cyzwkcxmkxxcovjcb4ft7bz4uyg0b0ah9toh1kmdpwg3t0lszgfcrqpu1v3tbikkf6awipml', 'beverage', 3, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Pecan Nut', '7apnjm4d8yjyyfdg011kx2wh5msdga4tq10tvz7iuiti0nxqpiuy63ryeygtdidi5w7rdl4kej1b5epdw8a0wx6qxeohzorm2bnr', 'beverage', 3, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT `menu_items`.`id`) FROM `menu_items` WHERE `menu_items`.`restaurant_id` = 3[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `menu_items` WHERE `menu_items`.`restaurant_id` = 3 LIMIT 11 OFFSET 0) subquery_for_count[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Smitham Group', 'm6v4qrgij3z3zaplxe8gepj22ne75eeix5t5c0zwwcmimine4p2hpx5rgjetxeajtm9wvmdhqrpo9dtggrx8pjtsgwa2f5uta19b', 'Lakinchester Kansas 5797 Schuster Glen', 0.9, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Considine-Braun', '5z6zjrntd88utk24e8ykqeteujv0o9u78x9m203b0fqlh0kij37nffkbcf88rzjwqyeo4xpb2utirs2267w5mcauu4jeqkrm6v89', 'East Murrayshire Hawaii 807 Vada Underpass', 2.3, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Goodwin-Lebsack', '7l8pmf0qmmv8cl2dl5qx7ux7d7wnov8cbtndh3aqa7ayoxn92oj0nlv2wpnxrlpy1fj4c366knvon8dlx5yea3u0hnegpl58taf5', 'North Babychester Connecticut 67788 Abbigail Grove', 1.3, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Langworth, Walter and Stracke', 'drj17fad2vith2sk2i2rgj4k6zfm7s5wngz77fd0v84dvkkqhib7ozv5se05b62edgmvlcmi6i79ey67igbjw0e7v3io9ogbk2yh', 'East Helenmouth Kansas 13122 Gustave Crest', 0.0, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Wuckert LLC', '83oak012u1rhvs0cmk4m59hcl3bqeet2tcrs8u130ql6bfbq3kqt918yftbew80zvwyqncitemga0pgxf7kpe6uz8n0qy9100r0y', 'Giovanishire Oklahoma 110 Ashton Islands', 1.2, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Daniel LLC', 'oin8vmr4s94d5ijh2gxishbiyggzf58wisqx99w0idir3kllwzhdljslfddr0ipu7vwi58qf9j2t3wnt6g9gg50otiw2pakpfir7', 'East Maximilliaton Delaware 33937 Bruen Cape', 4.5, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Boyer LLC', 'hpq1pmt1mo5d51t0eyzgyqdevis4upcsx7dpiv89787jojy1ba6yfxkbna5n8bp9i2ip2kgrp5smrar9q0jzc0jk7xecz1ye56lb', 'Lake Sandy Pennsylvania 566 Lehner Islands', 2.5, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Cummerata-Harris', '9d9chwybvchzrh1a6hdj9o8to7a5lxqcsui2ex4c9w5bkbx5pv196qocnn3ysc4xn6hzviaredjo4utf0cbmql745o1f9p7dsf5f', 'West Kamronside Louisiana 62013 Welch Trail', 1.1, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Kohler, Vandervort and Wilderman', 'an91khadol6exr9w9wu8bujx3gj8unhvyw1z3uk3dri1391brevy3wreaekwn7dubeltqgpqqfc0di3b3rbyclz0mc5628vvgb0y', 'Gulgowskiland Rhode Island 24089 Lewis Landing', 3.8, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Kessler Group', 'yl85t46uuna62u7ax6ifhvfu8xam6g7nx021pw4wlpg8w2am7hb8wtfl8z3bl36cmtlaabom6muy8242h3ri7mc6606bb798ql4l', 'North Geovanni Oklahoma 752 Brendon Grove', 3.0, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Wintheiser and Sons', 'iwzpx5plq0itp22zk19kx8as8k6poqcqq9udrdf50w5939rg4lk8kz5rekzm3ydo4vy3os79n48n3jr9vgcf9uto4ewmkfg8zeov', 'South Patricia Idaho 23167 Marvin Loaf', 4.9, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Carroll-Kreiger', 'q0atnuldemkk1rhve8shz5t5ppmiu0u91via3e5vg12fzl79f7kbwhtjkmxd3zrva1aqh9db7ip8i5vy01zrb2irktsmmj5cy11a', 'South Geoffrey Oklahoma 53104 Brown Wells', 2.1, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `restaurants` LIMIT 10 OFFSET 10) subquery_for_count[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Boyer, Tremblay and Hauck', '2hdmfiunjl84immfcbr0wtgaef9u9arm2xurvf9yafiwmfx7jilos51gzmug6rnu9vg7jpkwciiohq85vdjiu96lse3tadofg56e', 'East Rosaleeborough Delaware 549 Lubowitz Harbor', 1.2, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Quigley-Wehner', '40c0olk4j6b3aizdxlnux0bmz9zw8ov3nlzxq7qgrjb5e1zlit5x7a1io6xqumdhqfr5lxbsv4jbleqaywj92rw7f0p3ko0pr90y', 'West Suzannefort Illinois 37009 Anya Island', 2.2, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Murphy, Cummings and Maggio', '2a74s2gw5nu4rmoz8hsn9u55zbcas869dbk9rmytpmn6s3yivsttbtchmc41dj9hpu6ht0gu94d91fbguoyks9e9fcfg5avknkll', 'Port Otho Alabama 893 Crist Courts', 2.2, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Goodwin and Sons', 'gxzm1cg85maiy0agw46gl8eu5pp186s9qiza4qzael0cvytb0ea9qwrjfrio4qka2lcppgpydw69btlnmmbdhhjsu994nbi18bln', 'Lake Matt New York 8318 Wilderman Ford', 1.4, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Medhurst Group', 'itfvakcorf5s2cehjsdz4hzwb94rr30xnumm93r0nv8wcity9vzgthme2ux0fupfg30jbg873ejhn8qmfnp9v7uoia635klpmgcq', 'Louisaberg Minnesota 5652 Aliyah Squares', 3.9, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Collins-Lehner', 'fe2n04oatkskz5bkvleppbckdaft18p4msyvfx8yty0sjtirh7hxec5xhojvag6hkizaq60xsu4lchhl04vl3sknu7opewgbnolh', 'Lake Naomie West Virginia 8907 Collier Fields', 0.3, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Boyer, Nicolas and Ernser', 'dej02uqjpxxznunj09vcwa6if5vjll4ukmh7q4iis5y90vkz09j7es7ruju40j3pf09z145sebhg4puyry574jdh5ai0isttvda8', 'South Audieberg Minnesota 35919 Okuneva Crossroad', 1.2, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Klocko, Dooley and Leuschke', 'd99bdpjovgy8jl4468o9w6lw8hbkwbu6yk7wlvqg0tgrfowksjchsp8jza5xzdvhy731a3c13blw774uedjathob8o4q758jujx2', 'West Mya Kansas 11474 Blick Hill', 1.6, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Bechtelar Group', 'cew9jajyp8j4qmegs6fwdxe6p5rofai4fwoak6l5p60t5r4qqozxcg9zkx6xu1t6ntkf9sc72ro4e0y50cvzfdmog2n6w60m7vy6', 'Aydenbury Arkansas 2620 Jaclyn Squares', 1.4, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Nienow Group', 'w2yghzd85x09qjykoehxqsjvtu2dy1yzbhhn0n1nw15329ed9et3r08vng9c66hh0qszjkawc0y4q8ip0nq83uatbycqo4azeng7', 'Timothytown Wyoming 1426 Daron Prairie', 2.1, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.5ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Huels-Parker', 'rsm4tl3ktzl4jt8esom97ctkj5q5zpgp8trqhua9b230xut0e3esf2rwxg065qlukaknjcnyaznysc10f71qv7za1g6ssesv8u2w', 'Araceliberg Iowa 8581 Jeremy Island', 0.0, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT `restaurants`.`id`) FROM `restaurants`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `restaurants` LIMIT 11 OFFSET 0) subquery_for_count[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+Started GET "/api/v1/restaurants" for 127.0.0.1 at 2017-01-20 01:48:26 -0600
+Processing by Api::V1::RestaurantsController#index as HTML
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 403 Forbidden in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Bergnaum-Waelchi', '515017ybl5uu6t3s65cjqtm95v7xkszwgoso2r6ahibogrwngstun72yccsaf2vj51mqi75ainyoia8tqo0bu24od3hh6uvvozvh', 'Romainemouth Mississippi 2528 Simonis Cove', 4.6, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Armstrong and Sons', 'srip5oewlzxfkxqy8fa4m4h9fd5g927kl1tlw14uvkpx88olfqcg8q6yjm9di5nndh7rhtt30nb9kd6v0enlt9du2zht82qgmxpi', 'Lake Kristofferside Texas 94154 Price Estates', 3.2, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Friesen Group', 'eedjz110l28tm798oxst7a6xh39unl9xhk69vygwrmx21w6gxwno4e9kczy6sx8n26nvghdj9qpffh1wf90a1mxvga1ej5hhq5og', 'East Martina Mississippi 68561 Weber Rue', 4.9, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `api_keys` (`access_token`, `created_at`, `updated_at`) VALUES ('lAnDZ1h4J0AELa7iJ_1yUaRhfdgwks5B', '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+Started GET "/api/v1/restaurants?page[number]=0&page[size]=3" for 127.0.0.1 at 2017-01-20 01:48:26 -0600
+Processing by Api::V1::RestaurantsController#index as HTML
+  Parameters: {"page"=>{"number"=>"0", "size"=>"3"}}
+  [1m[36mApiKey Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `api_keys` WHERE `api_keys`.`access_token` = 'lAnDZ1h4J0AELa7iJ_1yUaRhfdgwks5B' LIMIT 1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` LIMIT 3 OFFSET 0[0m
+Completed 200 OK in 10ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Thompson, Ernser and Bayer', 's6y0su31p2qqykah57ir90rjbg7eizweg951jwrgjuytxg7zp16ttbzcgzk4qn2ndltwkz0cf9ycsoix6an3k4gm811xeglyy44d', 'Howellmouth Kansas 19042 Alexandra Glen', 0.5, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Pollich-Reichel', '7ttxkdri7keefg0wqkpfurhbzgnuziyidvhjizxrfyiizaz670apoh64naij59pxigae252ue2xxv3qgqhd74wwbjq58lg8ef538', 'Viviannemouth Kentucky 197 Crist Extension', 4.8, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Cassin-Schamberger', 'hbfziozbdp71plorixs9cmw82ph75495380z9nberdhmy3ddbnvixyn4dyg0rdgvvfeuoixovayohmiwhs83c0ydrzcwpw9khx8o', 'Riverport Tennessee 3212 Ola Pine', 0.3, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Emard, Dach and VonRueden', 'h57la9c76pyk1ela0ewxosfuke7e4hvjvkj9pzckm5w8kabc6xsig9rfzbk8qa7ujjbfpcq14bbu9qw60006citmups38juutl5h', 'Wisokyhaven Mississippi 537 Shyann Island', 0.9, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Hettinger Group', 'egyhjjftz7mlybfbdhnttpas0vyeuuai59nkujxqtbbhjvbj0ms3yq23h3isxs7wj9ro9lsz1c2ykns4szw8agbi6jvkjcc1ydwz', 'Tracybury Minnesota 392 Wilma Plaza', 1.9, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Cummerata LLC', 'xwbfblizil3szhwuph8abx6qydpdbiwrvpv9wqhab9pb5piesojbhcf4sn7e2gf7az8yqxw5b6ecyooajz9e333da6bqv56rltsv', 'Huelsmouth Alaska 9230 Cathy Gardens', 0.4, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Littel, O\'Connell and Schultz', '5xgqzdn755p3z5q6cwy4wafjh6t4ph1ah26pvt1fvkk3bbdch5llxg2bgefygqe065xk8biocmdewhv6u5db9eitrx41ed90coqk', 'South Alden South Carolina 365 Devon Forks', 4.0, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Crona Inc', '22ghrq3dyrpvhwi0xyk6naghulxru5i9dzxoowjnbqjphnfixwrlhie4bh9lwooo57le8kmiorfo9sju2l4xl5w5u3rwrzkinuw7', 'Hackettstad Maine 6784 Gaetano Ridges', 0.5, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Smith-Hilll', '1rxvjrfcyxw15zunohjld0hrshib9tbtj11tckc6dsuilv3ncnija04cr9owcr4b9sj5a09si4mum9lmo4jtyt0xepbil1eddwf6', 'Dionborough Minnesota 568 Leila Fords', 3.4, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Weimann LLC', '63q6i1hjf3p3qm20kg48euhpvfa41jmi73217sypc0wi2r3r255l0htan6jqullgo71er1hl26gtzoet2v5afqalczz7icdscyvs', 'Port Wilhelmland Idaho 828 Rusty Island', 0.5, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `api_keys` (`access_token`, `created_at`, `updated_at`) VALUES ('gjvspF1qBix2y9qY5w0B71rpTZhbt3TD', '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+Started GET "/api/v1/restaurants?page[number]=0&page[size]=1" for 127.0.0.1 at 2017-01-20 01:48:26 -0600
+Processing by Api::V1::RestaurantsController#index as HTML
+  Parameters: {"page"=>{"number"=>"0", "size"=>"1"}}
+  [1m[36mApiKey Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `api_keys` WHERE `api_keys`.`access_token` = 'gjvspF1qBix2y9qY5w0B71rpTZhbt3TD' LIMIT 1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` LIMIT 1 OFFSET 0[0m
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Abbott-Hauck', 'zi9qnral1uxtbc4xti38px8se3yov5admva9ha15bdv9izpakwxk54kqhl5sybo5pbao84h28ilvgqo2lnyb1ek2418v504jxiq7', 'East Giovannaview Washington 6232 Hansen Mews', 3.7, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Flounder', 'j1y9c2npf9aovvf78cgk84v9av7pzfvgidwqjlq50i1kff5resc5cdu2dkk4blvfvv2tm1x8e9xsti0reigsgn9p7vywqyjrwmee', 'appetizer', 40, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Haps Diner', 24, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Cinnamon', '0ihe5kisfvj88b3u8lf0l01v3x23lx33bgki0zm34zkq556ufep2p1supdmlag3uv7kiu2b51j07ckkug5t4pv2rp88tgjst1qal', 'dessert', 40, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('FBI Office', 25, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Brown Rice', 't12ql6u0e0ms4hkp2xi7k1uvwp6s4z9e63stieo0tqt69nhfet95at8lw3qo2ju4u6uu8uqya8mzj70zwl4mq0f590di4qsv2y82', 'appetizer', 40, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Double-R Diner', 26, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Extra Virgin Olive Oil', '7dhajrmi31a9v4ao4kz1b59ryznpn83moxysb82pywr8ptevylpfs5xyw89zy2pjhrsafnju98rxkgvicqkpz9v9xvaqa5rrresn', 'entree', 40, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Cemetery', 27, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Oyster Sauce', '8u3pvh282kqpavo0o2svjv1h111u6imke4z0p97jdebosan2vfhaqvsd5nzdpc42voyjtw4jmvo9az4a3njvodf4hjx7qjxv78og', 'side', 40, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('White Lodge', 28, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `api_keys` (`access_token`, `created_at`, `updated_at`) VALUES ('I5u9Q0p7xmkTPIGJiK0ij2v6Uv52eSKw', '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+Started GET "/api/v1/restaurants/show?restaurant_id=40&page[number]=0&page[size]=10" for 127.0.0.1 at 2017-01-20 01:48:26 -0600
+Processing by Api::V1::RestaurantsController#show as HTML
+  Parameters: {"restaurant_id"=>"40", "page"=>{"number"=>"0", "size"=>"10"}, "id"=>"show"}
+  [1m[36mApiKey Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `api_keys` WHERE `api_keys`.`access_token` = 'I5u9Q0p7xmkTPIGJiK0ij2v6Uv52eSKw' LIMIT 1[0m
+Unpermitted parameters: page, id
+Unpermitted parameters: page, id
+  [1m[36mMenuItem Load (0.2ms)[0m  [1m[34mSELECT  `menu_items`.* FROM `menu_items` WHERE `menu_items`.`restaurant_id` = 40 LIMIT 10 OFFSET 0[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE `tags`.`menu_item_id` = 24[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE `tags`.`menu_item_id` = 25[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE `tags`.`menu_item_id` = 26[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE `tags`.`menu_item_id` = 27[0m
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE `tags`.`menu_item_id` = 28[0m
+Completed 200 OK in 12ms (Views: 0.2ms | ActiveRecord: 1.4ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Conroy LLC', 'tfrcmpn2kw028k15xa2xrdtc4pirn7ux0onrdqota9f6f8ays7qcdgwhyvos4cy0edo7peji37u5fg54vj6lh2nxsxaj9th7rc1l', 'Abelville Rhode Island 8972 Vernon Land', 1.8, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Barley', 'ipnyl0q9xhpv5076gjolutxrm123364q9l4516znj7zx0gjhlo6b7nrs8ai330j032pe85ihxrmg2gly7cyudr6h3x8ph6pninnp', 'beverage', 41, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Fat Trout Trailer Park', 29, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Quark Quinc', 'sibx6ew6bvwjrvlwek90p2my4u9stmx2397xoohxwfltkpfy7x8l7jt0ulvtscfzpv4l1e1e34ksgafmrh3vndel4e531dnczfxg', 'entree', 41, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Timber Falls Motel', 30, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Choy Sum', '0musndt9l2wplih5pgtbxhzlsiw7goniaih0jcyasuc5w9t5i1blf7v58lbdc0a0l3a0er02375hwe9om3508sal47p4h8qom2iv', 'dessert', 41, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Blue Pine Lodge', 31, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Fish Stock', 'zahk6n693ev59ngp5fhzhkfnfx9l0m8qkorujfvg0ukgvi8cwdclpvln8bo4dhxin2lr2npbto56jnsfijkuwlbs1zwxjvxrmme9', 'dessert', 41, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('FBI Office', 32, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Cumin', 'q6856r93n2radlenoy9rwrxj2qpjgb4kk0ndtoiz0e0xd99p5oqm5kr2u51h9fvjbca0sgqrfw3i5a6oiup60hb521q19dw42bed', 'dessert', 41, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Deer Meadow', 33, '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+Started GET "/api/v1/restaurants/show" for 127.0.0.1 at 2017-01-20 01:48:26 -0600
+Processing by Api::V1::RestaurantsController#show as HTML
+  Parameters: {"id"=>"show"}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 403 Forbidden in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `api_keys` (`access_token`, `created_at`, `updated_at`) VALUES ('mI1468scnrH-LYyf5b8ZjWEuyBor3lrp', '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+Started GET "/api/v1/restaurants/show?page[number]=0&page[size]=10" for 127.0.0.1 at 2017-01-20 01:48:26 -0600
+Processing by Api::V1::RestaurantsController#show as HTML
+  Parameters: {"page"=>{"number"=>"0", "size"=>"10"}, "id"=>"show"}
+  [1m[36mApiKey Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `api_keys` WHERE `api_keys`.`access_token` = 'mI1468scnrH-LYyf5b8ZjWEuyBor3lrp' LIMIT 1[0m
+Unpermitted parameters: page, id
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `api_keys` (`access_token`, `created_at`, `updated_at`) VALUES ('tT6x-yLyVeH3Ddw1KLl6cu9lL5Bkd-JJ', '2017-01-20 07:48:26', '2017-01-20 07:48:26')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+Started GET "/api/v1/restaurants/show?restaurant_id=5000&page[number]=0&page[size]=10" for 127.0.0.1 at 2017-01-20 01:48:26 -0600
+Processing by Api::V1::RestaurantsController#show as HTML
+  Parameters: {"restaurant_id"=>"5000", "page"=>{"number"=>"0", "size"=>"10"}, "id"=>"show"}
+  [1m[36mApiKey Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `api_keys` WHERE `api_keys`.`access_token` = 'tT6x-yLyVeH3Ddw1KLl6cu9lL5Bkd-JJ' LIMIT 1[0m
+Unpermitted parameters: page, id
+Unpermitted parameters: page, id
+  [1m[36mMenuItem Load (0.3ms)[0m  [1m[34mSELECT  `menu_items`.* FROM `menu_items` WHERE `menu_items`.`restaurant_id` = 5000 LIMIT 10 OFFSET 0[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT @@FOREIGN_KEY_CHECKS[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT DATABASE() as db[0m
+  [1m[35m (1.1ms)[0m  [1m[34mselect table_name from information_schema.views where table_schema = 'restaurant_app_test'[0m
+  [1m[35m (5.5ms)[0m  [1m[35mTRUNCATE TABLE `api_keys`;[0m
+  [1m[35m (4.8ms)[0m  [1m[35mTRUNCATE TABLE `ar_internal_metadata`;[0m
+  [1m[35m (4.3ms)[0m  [1m[35mTRUNCATE TABLE `menu_items`;[0m
+  [1m[35m (3.4ms)[0m  [1m[35mTRUNCATE TABLE `restaurants`;[0m
+  [1m[35m (3.4ms)[0m  [1m[35mTRUNCATE TABLE `tags`;[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSET FOREIGN_KEY_CHECKS = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `api_keys` (`access_token`, `created_at`, `updated_at`) VALUES ('zjYE4etNMlinRdK_YKWJ_x1JZKqb7T-n', '2017-01-20 08:19:14', '2017-01-20 08:19:14')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Mante-Bednar', '7khkxbavmg5bb4dv5fv00aomts0atw52bspz1b49abc9d2la926w2vj9u44ri8sk9l9invucv9vb7303mtjcpq1c75oxjtnycfa1', 'South Susan Nebraska 976 Pattie Bridge', 4.3, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 1 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Raisin', '3x8gtugn71d6hamkpwedw5mh74c4oslo3bbkdtpqthr80wgk31tdz3fumvuau743905grdw7851mtokccedh6y3j8u1em3y0rbgr', 'entree', 1, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[36mMenuItem Load (0.3ms)[0m  [1m[34mSELECT  `menu_items`.* FROM `menu_items` WHERE `menu_items`.`restaurant_id` = 1 LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Weimann, Howell and Grant', 'zy568kr0blll9pzs0x2qxfp8wz8h7avx45ipwn2ol1sw1drlzaqlo3cyjbek9l746897p9iaqq89b8hrboigfkq8ik63ywp14mgo', 'Hollybury Kentucky 515 Hoppe Inlet', 0.6, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Snowpea sprouts', 'ylzezpchxonmihmwtyr8evkg8iizib9mnzao027yqbe93yj1nhnhrgd5oljb6myhvs887be2ypnimnt3e131g5io9plgr6tkcv9t', 'beverage', 2, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Asian Noodles', 'wxmww9olczqecex2ejykcdkzfeas0m3jzl2w33vqyeb53pkkwp8u9wzjjutmqj6ltcvoa7e0re1gybn02a0qto5vlp8d52fzew5p', 'dessert', 2, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Sultanas', '8ejsu226n1nhhjcd7ivlmafawd1kws1z1513efo7dcjcefdgmj0n5dq3v9oyn44u69o2ljwecds0k4qadnelgk9p9sepjcl5z6uq', 'beverage', 2, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Okra', '2xv9ggentoe58h1qkohum9gj5z696nt3rl7nby5hf7yvnk8uoxmiiudn8yx56h9ftapvctdjenguy04zpb6soq2wsv1clb3jplta', 'side', 2, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('ThymeTofu', '3wiv9l9hqv29xkw8bzw3wbo07ahivzzkzychd340w6uaj61zowdba2cl1alil73e9a3kyq3zwvnpi4qcdqt46mkalqkehqukmh1b', 'beverage', 2, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Oyster Mushrooms', 'tbtr549vhrs4yl7qqd8zr9wxki2ds05x2j4h2tf32zk2rvsjtgzq2v4m5fow3qcjaf1rqjujpf8xcbxrnff6ja2bcrlix875wqts', 'appetizer', 2, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Red Pepper', 'tl1s0jtqxe8o9wb6et6m8laawonoutv5jfrqrha6adrdttj75v33ut777t7n1n7h52vdmmrpl3v6ho26q0euyglp2ekn1eelmfio', 'beverage', 2, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Red Pepper', 'ybn7fxnd78d5rm0xim7afk65cvj2h7jrkpi7o7bkifydwkbz0gqdvk8apozmwex29eilavnhgifa48curfiog0joahipcddwf82d', 'dessert', 2, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Dandelion', 'g94boo46iuw807sym5hsqe1m3c575vs14kob0987zq3xnnoi393i30my2jyf24i30p676zxu2qt3loozkvrpjh2avgiglk7yyutp', 'entree', 2, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Kokam', 'm95bjkx75k6z6k7b1spoz6i28m0sacbwk5uwv3iovmnwkmvq0n8ic4h6sh3auqppmv6eqdncnfg7tk6ila36s7hx040lttni74fd', 'dessert', 2, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 2 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Mint', '841wvbter877sohlkoozge0j0j32wztj0s0ohmodejl95bfhm5t84ufc1glspk1p5ldb4vzhe44tmzxt7gmg4jrn53bjnuzfmz47', 'entree', 2, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `menu_items` WHERE `menu_items`.`restaurant_id` = 2 LIMIT 10 OFFSET 10) subquery_for_count[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Lakin-Kreiger', 'o77p4qgswbvr5f29mgovle7gmeel0dm2xdj3o3jlkub7tc7przxk4nq6w08d5aqvth8nltshfnlhiafomzayf92rm1h08gux7ztb', 'Claudineberg Maine 5541 Walter Station', 0.5, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Soba', '5i3zgi8fkm060qwwkf85rlh774kfv2zefta2tguwqtd8x42618cqp160xkxu98nccds4nkygv92tznq3a94fmo76li6xsmgr8rta', 'side', 3, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Honeydew melon', 'qzniiwxymxsmch5c93d2s14ji25c8g7x5r71uqpmvr0dye3pijf8rqbic2u4ego5zxu3qzt8qbpsfxpxd2ji43md7r04ly61f25w', 'appetizer', 3, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Limes', 'xdnpxv70s4nuttz646tb50yrf0elk1xzfp9iuv5609riq51mqb5bj8xqsula7km0ex82uw03fxccemlls02vz506szhmn8g0dfx6', 'appetizer', 3, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Shiitake Mushrooms', 'lcnywd33tzgubfgxm5u8hct3u4veudn74xw8c5l6dfhjbtic7tjdm4f6akccp0tficvxyc6yt0vp353ubol3ljwb7lw6dcy3js9z', 'entree', 3, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('RedWine', '0njkwlvx3v1l71bn1icrrsg57lqoaanog7z46jw989zo1vo5rb5zgbh339l1667tzmupq17dfiu37oa47jle9q56jc3r0t4fu0g0', 'side', 3, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Alfalfa', 'xq0df4a0srjcjg93o1qwh8vybjzbmr7atsgcuy6aebwglh7y7vzk7ejv25jk6d2s8hk3yn6bfuk3664aazv3l5sb39kh4ghb9vzn', 'appetizer', 3, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Parsley', 'tlb13lr1zblpfp3ezc4uexq47uqhhk36vdfoq0119s1a4zo05mjgfrmwxmq0rbr5t3sp3epg3fnltaqllotefenl9uklz6sia1ry', 'appetizer', 3, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Quark Quinc', 'icgnm6vmp54q322fbyeq6r1eqc5ymt1thsqvytygvh6jbi360w26d08e4vrvnqtiulbh2qrfv6034ekqeapjf0l586gds4jtiqoq', 'beverage', 3, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Allspice', 'fhuu3en1mem32hc4u7o65zc55se3kr554zg4hknbn99k4lzhlkzk171ey87aca2ouv9o28pm3vn9x772gj5tjjjm1mkur73k2sji', 'beverage', 3, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Rice paper', 'yil1g060a0awlicd0jgpru9cpuxr66gmclg4ujehuxr42mf4qnynufn2fam2h1qtmu5ztqbs8wd1geaolhx8us4q389fa16r93uu', 'appetizer', 3, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` WHERE `restaurants`.`id` = 3 LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Tempeh', 'b6gqdd4qy8qpjy46fwai32maqy4g7eun6stqzwnz330ffurouzhearbxn0kfvxm4qm0b5k4gfmeecm62xzpog16kr97xk8zc4t2a', 'dessert', 3, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT `menu_items`.`id`) FROM `menu_items` WHERE `menu_items`.`restaurant_id` = 3[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `menu_items` WHERE `menu_items`.`restaurant_id` = 3 LIMIT 11 OFFSET 0) subquery_for_count[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Wuckert-Deckow', 'zx516lm541gt38mgommpsejyq317afocfozi4gp6m3dfe27q7a5wrcbd195n9mmpa8yi9s7dxys9q4jrdlldgtdfyvnwr4g5q9ds', 'North Tyriquemouth New Hampshire 2142 Yost Brooks', 0.9, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[36mRestaurant Load (0.3ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Turner Inc', '85qbwpevg7u1zqjew56zmcbxic0xus3y2z105dz3ean3fy51mbkeq0egnblxkfr32p3521ieqt56sh7drgwvu0pailtx6q8ph5dp', 'Jakubowskiside Wisconsin 29352 Heller Knoll', 3.3, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Prohaska-Bauch', 'i991xczumpmia9sz919puxxla30x1e7i6o78oaosijgv85nzjup0g36b6z5zqj1qab6poreuhqm1ld2hu4a69qxm3fkfziq4r4r8', 'Georgiannaborough Colorado 2081 Paucek Forest', 1.9, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Predovic-Jacobi', '3bkjcfk4fvmkgm542t6qy3s84rbvpfks4sfxlngeaaeqm8clcwivjapckx1dr04nvc1temiprlw3jy0mepmqwlia5enr7d59eesi', 'North Edgartown Wyoming 47558 Antonetta Route', 2.2, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Franecki, Abbott and Spinka', '9eko6ken3a3en5wnfza1dxwnsd4wc0tg3l8tg4ercye3apiqzz4j9je8b81u8k6w20sst1zwigfpcuxw5mzoat8afwczcu97urlk', 'South Geovanymouth Washington 5312 Cormier Shoal', 2.5, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Breitenberg, Ebert and Kessler', 't7ne8ofbwq5jcttnpue50gx2tnjyq83vn53611txjm6ql1mbtrtv2h4n2008ijsy4fqlg53y1uq2um1edyqqa4cf4rfu78ohb440', 'Binsberg Maine 4628 Davin Fords', 2.0, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Steuber, Bernier and Dare', 'rowbn2l5dff6vty96df2i90euyqd9l0yzrwmhahv9k160ii5sijm54atofog2d1xvd3rwzunjne3rnqkubi021iz5j29ervx4ccg', 'Brekkebury Mississippi 29459 Leuschke Camp', 4.6, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Franecki, Klein and Williamson', 'uifp7bsgqvvv5ytm0i7l5sa6hp8tan6jz8zktglnhejjhjrugaj4270hl95snrp0rdig97gr728il6pwa0uti9zkz2cim0bdkpet', 'Lake Anyafurt Maine 31135 Clement Avenue', 2.1, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Eichmann-Feil', 's4wfo0qm0yfimy7fzw293dybfrvxx30hu9ujcvh67pizlel716grasn94lhvjv3fixkc11ksicd7221iyc77t1sgzu9mbxh861mf', 'Hamillville Wisconsin 822 Fabiola Land', 2.7, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Gerlach, Pollich and Morar', 'w4bw7x67zhr26dk3hdkz9ey89ieavu4pku6wtmh8326004n8hv7ixfo4f0pj2wibx4ylx5bwkxmeb4zwtqweliacdjhqk1jqzawi', 'Legrosport California 485 Carter Centers', 0.7, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Moen, Carter and Gutkowski', 'vlwcf7v0sj2553nkh0hk41kx0hofjv62vdy8eicc2mzr64cuo7d170rcqmavvraark99h2azi38z9ndlzm1yldu20qif3kklj9tj', 'Baumbachmouth Vermont 445 Goldner Knoll', 0.7, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Feeney-McKenzie', 'lburtw3r65ll0gu41lvi2xah8pm1b9vziaxhpiy8bawpbwv6zhzuazntsukcoc7w987jgf7yr6z4ic0baazfnisuxbator6e7ovy', 'West Bernadine Georgia 700 Maggio Turnpike', 1.2, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `restaurants` LIMIT 10 OFFSET 10) subquery_for_count[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Bednar and Sons', '7q2trqn6ti38ed0wsiqugxc4ayeowmbkupgz6z87kaavrg20rhxpivxshyfvf9jkov8lpftyprl1sdcyfcijhh8y3916ihomixlk', 'Frankieton Oklahoma 748 Schneider Drive', 2.7, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Spinka-Hamill', 'ajh67ee8nz9majj6f4drz9aynjknm3qbh012wtstcpqnwbzzrtx5ddkpns78r96ac1pm4t52s19ddhmjjlxcrc0xwz5s2xjl6hxl', 'New Shakira West Virginia 938 Kovacek Curve', 1.8, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Jerde, Collins and O\'Connell', 'yr3el62gwadifi1ypawhdra4pn1detjrnd74zi37ami9zuzoafml3i1niuu2hxmh7bzesrzt5y0uwlv3ywppvvl90ey9tshhdc1e', 'New Sammy Georgia 7630 Sasha Crossing', 2.0, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Murphy Inc', '6qu24pzb2u1rh20ruh1p7lc3vwmrjefarwokfr190tm0tsonufommfejrsn4gbwuo0lb4cd4kjxbenxvhk5s6e9qp3djsahkb5bj', 'Pierrehaven Washington 850 Rosalyn Extensions', 0.9, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Spencer, Vandervort and Orn', '8vcs66yzd95k2306renygdnyo8xxth5h3tjsuxzinj0biqwqkxc6j5576igzvd9l8apj9bhcu5ylba57q17b3w0g0u8byonvt36g', 'Lake Theodoreborough Tennessee 4123 Aditya Knolls', 1.7, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Tromp-Ryan', '9sopbwl67bs2o5rcukf8xbswzyl0pkb2las5ugonk0sb11ux50ct1s7knz4k638n369uvpo4mi884baxqneiwgkg8wucbxa8lb0d', 'West Guiseppeborough Wisconsin 17085 Collier Loop', 2.4, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Koelpin, White and Renner', '65mgm8j3wmnkixmn8zrg67a2byllbqjfi3vyv6vmd58y51h8iaobpcjzpkx3zl20rkgq428xt9hb7temmziu1m5he00pzly05wl3', 'Ashastad New Jersey 312 Steuber Plaza', 2.0, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Cremin-MacGyver', 'p9l0bsaji1tnsoqeos5o9akinio8qds0uku26sx4fkjpv0uszuvx50db5usciuthn41su3fehx7y3v47qu0954lsckz60fzhwdxk', 'East Cassandre Alaska 6707 Reilly Underpass', 3.4, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Blanda, Bogisich and Hagenes', 'xv1e6lshaz2sm8jjeo0ndpucptyemn86fmqyk4pwp8jjpdcr3hz9fcqsd8cl08ys5vos8flfu7l7zoih9ur8gba6yh9r70h6r99i', 'Howeville North Carolina 6925 Hamill Isle', 2.9, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Koepp-Aufderhar', 'pyhy15iv9zd81onbftycvsfm1u7mtfqeqc3oswsgdpwod68gihnoy23l2pns19mkqqznqir8fcyg1h1q6d6s3dd1w9yhub5q8hjs', 'East Naomie Colorado 759 Abshire Parkways', 2.3, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Herzog, Watsica and O\'Kon', '7nvoyr2x537raghrk67yrgd36p99z2o274gdk5ga1e93wqp7jhopnwmvur9k5rzvgsb3owoaobnen51ul7nunvlmtqfo54lx7l7f', 'South Greysonburgh Maine 905 Nolan Mountains', 1.8, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT DISTINCT COUNT(DISTINCT `restaurants`.`id`) FROM `restaurants`[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM `restaurants` LIMIT 11 OFFSET 0) subquery_for_count[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+Started GET "/api/v1/restaurants" for 127.0.0.1 at 2017-01-20 02:19:15 -0600
+Processing by Api::V1::RestaurantsController#index as HTML
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 403 Forbidden in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Ledner-Trantow', 'te3hwj97zme4odr68lxlhhyjytoeyurwy6pqtbw540qyh5dgzymom7z44rhj7rlyhvxm1wc8ll31qrgoczb1mv7hgr2jummj23gu', 'South Rodolfostad Delaware 26121 Rice Inlet', 4.5, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Fritsch Inc', 'gtun7pooaz8ez97qb05gmu0vvcvpe20p1gczi4h7j1z26k0ds168ppknq8x1dslbn2orxiq6sles8ikqiykvj5d9o2wuyesci1l4', 'Lake Merritt Texas 3650 Muriel Square', 4.9, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Heidenreich LLC', '54phqfm2o5s7biey9zlmm0fluy1peuzbjqkr7rcvylmz73rs11mw8b8twdagn4mb3k9utartaj60z3xy903n9q6ouibevhb9169v', 'South Maryamhaven Hawaii 461 Berge Courts', 2.9, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `api_keys` (`access_token`, `created_at`, `updated_at`) VALUES ('lSfQI-Q90WptVtY6JlVofRc4lH401KbJ', '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+Started GET "/api/v1/restaurants?page[number]=0&page[size]=3" for 127.0.0.1 at 2017-01-20 02:19:15 -0600
+Processing by Api::V1::RestaurantsController#index as HTML
+  Parameters: {"page"=>{"number"=>"0", "size"=>"3"}}
+  [1m[36mApiKey Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `api_keys` WHERE `api_keys`.`access_token` = 'lSfQI-Q90WptVtY6JlVofRc4lH401KbJ' LIMIT 1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` LIMIT 3 OFFSET 0[0m
+Completed 200 OK in 20ms (Views: 2.0ms | ActiveRecord: 0.5ms)
+  [1m[35m (5.8ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Dickens, Hammes and Shields', '9oyllnh0lf53esernxaqcnt63rrdhbqpwcojor8z9uafyxq22ess9f93a9jvy8ok3ylgev2jvgtfuysgzkh8r1ko4p2fxyl4rvlt', 'Huelfurt Wyoming 68604 Hubert Mountain', 3.9, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Parisian-Kris', 'h6mg3tt7k6u1w6ahyroowha5o2pig28hirp8r4ble0agv2zkrqlh4egkyds6eqcogp86f52gaquu00se3un9rr31nbl14szyyxs7', 'Gonzaloview Utah 562 Nestor Squares', 2.4, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Reichert LLC', 'gmfgwb3q9q6h8eaoxvnhqyw07wjet0h2xmanyiscj5mqdrowe7rqq0u33799istz4js5xkqd5womxrk5wlo1azfz4ko455hg1fj0', 'Kirlinmouth Idaho 2971 Quincy Trace', 1.1, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Keeling LLC', 'semsnfaxiz1upehfpq0zksh55ixydui9e6t7iuixref99523wqkkjzffz1mies917onv2odehofjsbpcg6vjqazoroe95jkdk19s', 'South Leolaborough Arizona 4348 Klein Pass', 2.3, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Bernier LLC', 'r6dqganf19gypujnmltebt2f2zd18qe0rxdjs47n8n4271i2e2pa7bmoy69sa8cxn2n59i7ljbcks5e0mwsn0wz4cnzuit2p1w05', 'Lake Margaretteborough North Carolina 635 Evie Cape', 4.9, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Pacocha, Skiles and O\'Connell', 'axymgnidf6ecktorlk5a82jvudlbz2qzbknpzjkglnwti1r375n3dmxfhhyyaumfvkxz1h564ew394xo1jo7h15xutee8c0pwdaj', 'New Brandtview Idaho 1508 Timmy Drives', 0.4, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Jacobs-Thompson', 'iiipo4mxocwaq1fw5ce7um6pl4b5yhiqqij9smmmh847ffr98u265iqj8096t23kvuyjs26q02ud4wdtdgjrwpxecddpn1zqjikc', 'Port Angel Kansas 1773 Lavada Cove', 2.5, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Conroy, Berge and Howell', 'etg9j774j6s2sp93faxy9m9irij452kj1pkohpd4kzwq5mm6bdpygc878550bufkmk2uzla2p1sjorws9upp3gwkdmkzy79lljcu', 'Port Dougton North Carolina 33314 Harrison Lakes', 1.2, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.4ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Dooley, Becker and Gleichner', 'p6k1u83jhijeo0kqid5oj3r8ik9zbij41vnex2a9jj11y0kkuytfcvkd2smqh5hamad1sjgb90w1ymrbayaf7ylxlwba9deoti82', 'Bettyton Alabama 19036 Luettgen Station', 4.3, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Conn-Kertzmann', 'uvbqgbeti8f7fhycu6n82ca7q59zsxdxh6968q9v2x6cy1ncla3b19xi7hvg2c6hi80gy1rpkmj2r1fu792wofz8620tsyqhae14', 'West Justineberg Alabama 2435 Summer Drives', 3.3, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `api_keys` (`access_token`, `created_at`, `updated_at`) VALUES ('ZS2CwMwunp0RE_aMAkE-M-nCPcXwhaOh', '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+Started GET "/api/v1/restaurants?page[number]=0&page[size]=1" for 127.0.0.1 at 2017-01-20 02:19:15 -0600
+Processing by Api::V1::RestaurantsController#index as HTML
+  Parameters: {"page"=>{"number"=>"0", "size"=>"1"}}
+  [1m[36mApiKey Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM `api_keys` WHERE `api_keys`.`access_token` = 'ZS2CwMwunp0RE_aMAkE-M-nCPcXwhaOh' LIMIT 1[0m
+  [1m[36mRestaurant Load (0.2ms)[0m  [1m[34mSELECT  `restaurants`.* FROM `restaurants` LIMIT 1 OFFSET 0[0m
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('Kunde and Sons', 'b9i28azpz5ce2puh2wbtjbz5jvcfjt75ljekrrggh34nq9ftnsvw0mkxda8ozw5n4je8po10v838ldcfaqjqllqyddd4iceem3z3', 'South Jeremy North Dakota 5063 Hayes Loaf', 3.1, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Canola Oil', '7lmqe2psxk46qk727b1rt0lojcx1h7gd8ex5ub2qn1yy4chetyv0zspva2qqicfslb6riu5yiv8fsizho2yd0n9huj3ice5vfa12', 'beverage', 40, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Town Hall', 24, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Wholemeal', 'wj4hp3p10djl4t4a6nrt1v2amxtc4otsx5yoyyzihdyxgjsq2nmofnoq8u0nlndi3gcuivu8zz2dziayclc8y22qpqzck16f7czg', 'dessert', 40, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Palmer House', 25, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Lettuce', 'crfovygo6lsisguemszddiukybhu3yvyi20istajuj709av1zptvb1vhbv8i1fqx7e64ihh4btjy9etpkl8bvtxq8w2vge95254h', 'beverage', 40, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Blue Pine Lodge', 26, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Cinnamon', 'reda16gx673bvmp099vfecbonc63xph0o59rqxjhaelluowi0cbpqmak3ett7vaznqyx1944ksvfdghpkwq8odzrilpq0plwahm9', 'beverage', 40, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Timber Falls Motel', 27, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Mangosteens', 'pepr21henn0bfgfgkjvuw0lu4mz6c9yhloq4u5qun6x1iergp556m7e3lpx57206dbupf0pm4e1f5qyl8b7i5gzs4qbxlrci6s6f', 'appetizer', 40, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Cemetery', 28, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `api_keys` (`access_token`, `created_at`, `updated_at`) VALUES ('jKQIyw9bu2Cdv9hrhzjfTyvtmHFbOp-o', '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+Started GET "/api/v1/restaurants/show?restaurant_id=40&page[number]=0&page[size]=10" for 127.0.0.1 at 2017-01-20 02:19:15 -0600
+Processing by Api::V1::RestaurantsController#show as HTML
+  Parameters: {"restaurant_id"=>"40", "page"=>{"number"=>"0", "size"=>"10"}, "id"=>"show"}
+  [1m[36mApiKey Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `api_keys` WHERE `api_keys`.`access_token` = 'jKQIyw9bu2Cdv9hrhzjfTyvtmHFbOp-o' LIMIT 1[0m
+Unpermitted parameters: page, id
+Unpermitted parameters: page, id
+  [1m[36mMenuItem Load (0.3ms)[0m  [1m[34mSELECT  `menu_items`.* FROM `menu_items` WHERE `menu_items`.`restaurant_id` = 40 LIMIT 10 OFFSET 0[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE `tags`.`menu_item_id` = 24[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE `tags`.`menu_item_id` = 25[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE `tags`.`menu_item_id` = 26[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE `tags`.`menu_item_id` = 27[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT `tags`.* FROM `tags` WHERE `tags`.`menu_item_id` = 28[0m
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 1.5ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `restaurants` (`name`, `description`, `address`, `rating`, `created_at`, `updated_at`) VALUES ('DuBuque, Larson and Botsford', 'rbtxyaz5f5c4nhskf86dlae26wbn7w1sihe1d99o2r5rw8ipwqojs6bqb1v7bpf4agjsq3ut2nn02vypws7oadk8b14r5pk2pd3d', 'Eichmannside Vermont 770 Bins River', 3.0, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Cashews', 's93hjbbodvdaw2ilb37wjyi747v809psbp5a4x8blba7lw3e9lh22sygrm0799tlf8d6gn79tvovt8lg2nvisvaa9pf3iaaoaiyu', 'entree', 41, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Roadhouse', 29, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Bread', '58bywhghsk3mcn0e8y7qr03kfu3403bb0e7w5jmosr5w4rh8i6qn1rvt4wijns12ujwaf6sbihvx6xewta4es58bxncohssm9tpi', 'dessert', 41, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Twin Peaks Savings & Loan', 30, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Radish', 'mkinkmcvpf2p61yosl0il1l1w2yggx9cnttlehozfuylqmpyu7ueay2xce39kvap3eq2tcnc7v0q3n3cmi4g1p8l51pb4jno2w7l', 'dessert', 41, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Deer Meadow', 31, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Cocoa powder', '7efg4rre8y5kecyi7o2xflh116gcyxtbsifkn5q798fomzp9pip4hubd2o85u1cjr7kok6bmq86mk58fh0710pcotjo8watcev61', 'dessert', 41, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Twin Peaks Savings & Loan', 32, '2017-01-20 08:19:15', '2017-01-20 08:19:15')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `menu_items` (`name`, `description`, `category`, `restaurant_id`, `created_at`, `updated_at`) VALUES ('Pecorino', 'dtgobc425j0o4tlm10zvw235fnjv4dbwd1otkv98shdzd2jhyq52ezpq9wl2xynybdvnr4rj61l0udgksk2ygtiotckdy1bsh1cd', 'side', 41, '2017-01-20 08:19:16', '2017-01-20 08:19:16')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.1ms)[0m  [1m[32mINSERT INTO `tags` (`name`, `menu_item_id`, `created_at`, `updated_at`) VALUES ('Glastonbury Grove', 33, '2017-01-20 08:19:16', '2017-01-20 08:19:16')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+Started GET "/api/v1/restaurants/show" for 127.0.0.1 at 2017-01-20 02:19:16 -0600
+Processing by Api::V1::RestaurantsController#show as HTML
+  Parameters: {"id"=>"show"}
+Filter chain halted as :authenticate_request rendered or redirected
+Completed 403 Forbidden in 0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.5ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `api_keys` (`access_token`, `created_at`, `updated_at`) VALUES ('a40bmmWcffLwP1_bxLxMLsRrSZpCch7R', '2017-01-20 08:19:16', '2017-01-20 08:19:16')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+Started GET "/api/v1/restaurants/show?page[number]=0&page[size]=10" for 127.0.0.1 at 2017-01-20 02:19:16 -0600
+Processing by Api::V1::RestaurantsController#show as HTML
+  Parameters: {"page"=>{"number"=>"0", "size"=>"10"}, "id"=>"show"}
+  [1m[36mApiKey Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `api_keys` WHERE `api_keys`.`access_token` = 'a40bmmWcffLwP1_bxLxMLsRrSZpCch7R' LIMIT 1[0m
+Unpermitted parameters: page, id
+Completed 422 Unprocessable Entity in 2ms (Views: 0.2ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_3[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `api_keys` (`access_token`, `created_at`, `updated_at`) VALUES ('O_W-MiFgg_fMJ3ftIKrEXYaGPn8TZmzy', '2017-01-20 08:19:16', '2017-01-20 08:19:16')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_3[0m
+Started GET "/api/v1/restaurants/show?restaurant_id=5000&page[number]=0&page[size]=10" for 127.0.0.1 at 2017-01-20 02:19:16 -0600
+Processing by Api::V1::RestaurantsController#show as HTML
+  Parameters: {"restaurant_id"=>"5000", "page"=>{"number"=>"0", "size"=>"10"}, "id"=>"show"}
+  [1m[36mApiKey Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM `api_keys` WHERE `api_keys`.`access_token` = 'O_W-MiFgg_fMJ3ftIKrEXYaGPn8TZmzy' LIMIT 1[0m
+Unpermitted parameters: page, id
+Unpermitted parameters: page, id
+  [1m[36mMenuItem Load (0.3ms)[0m  [1m[34mSELECT  `menu_items`.* FROM `menu_items` WHERE `menu_items`.`restaurant_id` = 5000 LIMIT 10 OFFSET 0[0m
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m

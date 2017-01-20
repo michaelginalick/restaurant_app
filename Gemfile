@@ -2,6 +2,8 @@ source "https://rubygems.org"
 
 ruby "2.3.0"
 
+ENV['RUBY_DEP_GEM_SILENCE_WARNINGS'] = '1'
+
 ## App
 gem "rails", ">= 5.0.0.beta3", "< 5.1"
 gem "mysql2"

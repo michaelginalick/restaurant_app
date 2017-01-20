@@ -6,6 +6,7 @@ def create_data
   100.times do
     restaurant = FactoryGirl.create(:restaurant)
     menu = FactoryGirl.create(:menu_item, restaurant_id: restaurant.id)
+    tag = FactoryGirl.create(:tag, menu_item: menu)
   end
 end
 

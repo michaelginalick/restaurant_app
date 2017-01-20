@@ -20,3 +20,9 @@
 6. Create authorization token
 ..* bundle exec rails c
 ..* ApiKey.create!
+
+7. Restaurant Index Curl request
+..* curl -X GET -H "Authorization: example_access_token" -H "Cache-Control: no-cache" -H 'http://localhost:3000/api/v1/restaurants'
+
+8. Restaurant Show Curl request
+..* curl -X GET -H "Authorization: example_access_token" -H "Cache-Control: no-cache" -H 'http://localhost:3000/api/v1/restaurants/1?restaurant_id=1'
