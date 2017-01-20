@@ -4,7 +4,6 @@ RSpec.describe Restaurant, type: :model do
   let!(:restaurant) { create(:restaurant) }
 
   describe "#paged_search" do
-    # let(:search_params) { { restaurant_id: nil } }
     let(:page_params) { { number: 1, size: 10 } }
 
     it "returns paged results of restaurants" do
