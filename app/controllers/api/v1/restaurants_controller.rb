@@ -44,7 +44,7 @@ module Api
 
       def page_params
         return {} unless params[:page]
-        params.require(:page).permit(:number, :size, :all).tap do |result|
+        params.require(:page).permit(:number, :size, :all).to_h.tap do |result|
           result[:number] = Integer(result[:number]) unless result[:number].blank?
           result[:size] = Integer(result[:size]) unless result[:size].blank?
         end

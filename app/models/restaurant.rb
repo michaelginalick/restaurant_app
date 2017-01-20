@@ -21,7 +21,6 @@ class Restaurant < ApplicationRecord
   DEFAULT_PAGE_SIZE = 10
   def self.paged_search(page_params)
     arel = Restaurant
-
     if page_params[:all]
       page_params[:number] = 1
       page_params[:size] = arel.distinct.count
