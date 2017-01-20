@@ -1,22 +1,22 @@
 # README
 
-* Ruby version
+1. Ruby version
 ⋅⋅* 2.3.0
 
-* Rails version
+2. Rails version
 ⋅⋅* 5
 
-* Database creation
+3. Database creation
 ⋅⋅* rake db:create
 ⋅⋅* rake db:migrate
 ⋅⋅* rake db:setup
 
-* Database initialization
+4. Database initialization
 ⋅⋅* MySQL
 
-* How to run the test suite
+5. How to run the test suite
 ⋅⋅* bundle exec rspec spec
 
-* Create authorization token
+6. Create authorization token
 ⋅⋅* bundle exec rails c
 ⋅⋅* ApiKey.create!
