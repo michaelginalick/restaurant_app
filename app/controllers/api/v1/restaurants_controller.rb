@@ -22,7 +22,6 @@ module Api
       param :page, Hash, "page[:number] (defaults to 1) and page[:size] (defaults to 10)", required: false
 
       error code: 403, desc: "Not authorized"
-      error code: 404, desc: "Restaurant not found"
       error code: 422, desc: "One or more required paramters are missing"
       error code: 500, desc: "There was an internal server error."
 

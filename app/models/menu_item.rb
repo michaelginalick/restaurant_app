@@ -18,11 +18,6 @@ class MenuItem < ApplicationRecord
   validates :description, :category, :name, :restaurant_id, presence: true
   validates :category, inclusion: { in: %w(entree appetizer dessert beverage side) }, presence: true
 
-  def all_tags
-    self.tags.map(&:name).join(", ")
-  end
-
-  DEFAULT_PAGE_SIZE = 10
   def self.paged_search(search_params, page_params)
     arel = MenuItem
     arel = arel.where(restaurant_id: search_params[:restaurant_id])

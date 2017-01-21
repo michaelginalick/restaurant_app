@@ -17,8 +17,6 @@ class Restaurant < ApplicationRecord
   validates :name, :description, :address, :rating, presence: true
   validates :rating, :inclusion => 0.0..5.0
 
-
-  DEFAULT_PAGE_SIZE = 10
   def self.paged_search(page_params)
     arel = Restaurant
     if page_params[:all]
